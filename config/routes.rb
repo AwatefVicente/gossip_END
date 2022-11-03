@@ -9,6 +9,6 @@ Rails.application.routes.draw do
 
   resources :gossips
   resources :users
-  resources :session
+  resources :sessions
 
 end
