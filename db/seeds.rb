@@ -11,25 +11,25 @@ City.destroy_all
 Gossip.destroy_all
 
 10.times do
-  city = City.create(
+  city = City.create!(
     name: Faker::Movies::StarWars.planet,
     zip_code: Faker::Address.zip_code
   )
 end
 
 10.times do
-  user = User.create(
+  user = User.create!(
     first_name: Faker::TvShows::GameOfThrones.dragon,
     last_name: Faker::Name.last_name,
     description: Faker::Movies::StarWars.quote,
-    email: Faker::TvShows::GameOfThrones.dragon+"@gmail.comm",
+    email: Faker::Internet.free_email,
     age: Faker::Number.within(range: 14..80),
     city_id:City.all.sample.id,
   )
 end
 
 20.times do
-  gossip = Gossip.create(
+  gossip = Gossip.create!(
     title: Faker::Music::Opera.mozart,
     content: Faker::Music::Prince.lyric,
     user_id:User.all.sample.id
@@ -38,7 +38,7 @@ end
 
 
 10.times do
-  tag = Tag.create(
+  tag = Tag.create!(
     title: Faker::Books::CultureSeries.civ
   )
 end

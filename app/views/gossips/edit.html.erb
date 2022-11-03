@@ -9,14 +9,11 @@
 
   <div class="form-group">
     <label>Contenu de cet article</label>
-    <%= f.text_area :body, size: "60x12", class: 'form-control' %>
+    <%= f.text_area :content, size: "60x12", class: 'form-control' %>
   </div> 
 
   <div class="form-group">
-    <button type="submit"
     <%= f.submit "Create" %>
   </div> 
-
-
 
 <% end %>
