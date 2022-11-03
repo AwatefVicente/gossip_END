@@ -1,2 +1,31 @@
-<h1>Gossip#new</h1>
-<p>Find me in app/views/gossip/new.html.erb</p>
+<h1>Créer un Gossip</h1>
+<!-- Page nouveau gossip-->
+<div class='container my-5 py-4 '>
+
+  <%= form_tag url_for(action: 'create'), method: "post" do %>
+
+    <div class='form-group'>
+
+      <label>Titre du Potin</label><br>
+      <%= text_field_tag 'title',"", class: 'form-control'%>
+
+    </div>
+
+    <br>
+
+    <div class='form-group'>
+
+      <label>Contenu du Potin</label><br>
+      <%= text_area_tag 'content',"", class:'form-control'%>
+
+    </div>
+
+    <br>
+
+    <div class='form-group'>
+
+      <button type=submit class='btn btn-success'>Créer le Potin</button>
+
+    </div>
+  <% end %>
+</div>
