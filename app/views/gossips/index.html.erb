@@ -8,12 +8,11 @@
       <div class="d-flex justify-content-center row mx-2 row-cols-5">
         <% @gossips.each do |gossip| %> 
           <div class="col card mx-5 my-5 container-fluid" style="width: 18rem;">
-            <div class="card-body card-deck">
+            <div class="card-body card-deck" style="background-color: #F3C9D9">
               <h5 class="card-title">Gossip n°<%= gossip.id  %></h5>
               <h6 class="card-subtitle mb-2 text-muted"><%= gossip.user.first_name %></h6>
               <p class="card-text"><%= gossip.title %></p>
               <a href="gossips/<%=gossip.id%>" class="card-link">Voir le gossip</a>
-              <a href="users/<%=gossip.user.first_name%>" class="card-link">Voir le profil</a>
             </div>
           </div>
         <% end %>

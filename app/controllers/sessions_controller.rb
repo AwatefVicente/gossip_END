@@ -6,11 +6,13 @@ class SessionsController < ApplicationController
     @user = User.find_by(email: params[:email])
 
     if @user && @user.authenticate(params[:password])
-      puts 'yes'
+      puts 'tout est bon'
       session[:user_id] = @user.id
       redirect_to '/'
     else
-      puts 'no'
+      flash.now[:danger] = 'Invalid email/password combination'
+      render 'new'
+      puts 'Tout est faux'
     end
   end
 

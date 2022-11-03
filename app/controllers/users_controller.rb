@@ -20,6 +20,7 @@ class UsersController < ApplicationController
       )
 
     if @user.save
+      session[:user_id] = user.id
       puts 'Utilisateur sauvegardé'
       redirect_to '/'
     else

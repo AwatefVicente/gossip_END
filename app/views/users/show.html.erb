@@ -6,8 +6,9 @@
 <div class="mx-3">
 <p>Prénom : <%= @user_db.first_name %></p>
 <p>Nom : <%= @user_db.last_name %></p>
-<p>Description : <%= @user_db.description %></p>
 <p>email : <%= @user_db.email  %></p>
 <p>Age : <%= @user_db.age %></p>
 <p>Ville : <%= @user_db.city.name %></p>
+<p>Description : <%= @user_db.description %></p>
+<p><a href="<%= gossips_path %>" class="btn  btn-primary">Revenir aux articles</a></p>
 </div>

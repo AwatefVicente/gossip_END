@@ -1,6 +1,21 @@
-<h1><%= @gossips.title %> </h1>
-<p><%= @gossips.content %></p>
+<body>
+  <main>
+    <div class="text-center my-5">
+      <h1> Gossip </h1>
+    </div>
 
-<p>
-  <a href="<%= gossips_path %>" class="btn  btn-primary">Revenir aux articles</a>
-</p>
+    <div class="mx-4">
+      <h3>Ecrit par <a href="/users/<%= @gossip.user.id %>"><%= @gossip.user.first_name%></a></h3>
+      <br>
+
+      <h4>Titre <%= @gossip.title %></h4>
+      <br>
+      <p><%= @gossip.content %></p>
+      <p>
+      <a href="<%= gossips_path %>" class="btn  btn-primary">Revenir aux articles</a>
+      </p>
+    </div>
+
+  </main>
+</body>
+
