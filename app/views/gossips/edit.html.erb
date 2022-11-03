@@ -1,0 +1,21 @@
+<h1>Editer cet article </h1>
+
+
+<%= form_for @gossips do |f| %>
+  <div class="form-group">
+    <label>Titre de cet article</label>
+    <%= f.text_field :title, class: 'form-control' %>
+  </div> 
+
+  <div class="form-group">
+    <label>Contenu de cet article</label>
+    <%= f.text_area :body, size: "60x12", class: 'form-control' %>
+  </div> 
+
+  <div class="form-group">
+    <%= f.submit "Create" %>
+  </div> 
+
+
+
+<% end %>
