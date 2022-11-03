@@ -1,5 +1,5 @@
 <div class="text-center mt-4" style="color: #F3C9D9">
-  <h1>Nouveau Utilisateur</h1>
+  <h1>New User</h1>
 </div>
 
 
@@ -9,7 +9,7 @@
     <%# Prénom %>
     <div class="card-header">
       <%= form_tag url_for(action: 'create'), method: "post" do %>
-      <%= label_tag 'Prénom' %> <br>
+      <%= label_tag 'First name' %> <br>
     </div>
     <div class="card-body">
       <%= text_field_tag 'first_name'%>
@@ -17,7 +17,7 @@
 
     <%# Nom %>
      <div class="card-header">
-      <%= label_tag 'Nom' %> <br>
+      <%= label_tag 'Last name' %> <br>
     </div>
     <div class="card-body">
       <%= text_field_tag 'last_name'%>
@@ -49,7 +49,7 @@
 
     <%# Password %>
       <div class="card-header">
-      <%= label_tag 'Mot de passe' %> <br>
+      <%= label_tag 'Password' %> <br>
     </div>
     <div class="card-body">
       <%= text_field_tag 'password'%>
@@ -57,7 +57,7 @@
 
     <%# Confirmation %>
     <div class="card-header">
-     <%= label_tag 'Confirmer votre mot de passe' %>
+     <%= label_tag 'Confirm your password' %>
     </div>
     <div class="card-body">
       <%= text_field_tag 'confirm_password' %>
@@ -65,7 +65,7 @@
     <br>
 
     
-    <%= submit_tag "Envoyer" %>
+    <%= submit_tag "Submit" %>
     <% end %>
   </div>
 </div>

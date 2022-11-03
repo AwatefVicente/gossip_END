@@ -10,6 +10,4 @@ class User < ApplicationRecord
   validates :password, 
     presence: true, 
     length: { minimum: 6 }
-  validates :city_id,
-    presence: {message: "La ville est obligatoire"}
 end

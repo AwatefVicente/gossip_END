@@ -16,11 +16,11 @@ class UsersController < ApplicationController
         age: params[:age],
         password: params[:password],
         password_confirmation: params[:confirm_password],
-        city_id: rand(1..10)
+        city_id: rand(111..120)
       )
 
     if @user.save
-      session[:user_id] = user.id
+
       puts 'Utilisateur sauvegardé'
       redirect_to '/'
     else
@@ -28,5 +28,7 @@ class UsersController < ApplicationController
       render new_user_path
     end
   end
+
+  
 
 end
